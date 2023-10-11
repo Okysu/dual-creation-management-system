@@ -1,0 +1,27 @@
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 6000
+    database: 0
+  datasource:
+    url: jdbc:mysql://localhost:3306/dual_creation_management?zeroDateTimeBehavior=convertToNull
+    username: dual_creation_management
+    password: dual_creation_management
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 10000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+
+server:
+  port: 3000
